@@ -8,6 +8,14 @@ export BUILDDIR=$PWD/x86/osx
 you need to have CC unset so it will pick up clang
 CC=gcc will probably not work.  
 
+To get it to work
+1 /usr/local/lib/lcc/gcc/cpp /usr/local/lib/lcc/gcc/cpp. put the x86/osx directory in your build path
+2. sudo mkdir -p /usr/local/lib/lcc/gcc/
+3. make a symbolic link with sudo ln -s path-to-x86/osx/cpp /usr/local/lib/lcc/gcc/cpp
+4. make a symbolic link with sudo ln -s path-to-x86/osx/rcc /usr/local/lib/lcc/rcc
+5. vi helloworld.c   write something simple
+6. test the compiler trivially by running lcc -s helloworld.c and then view the assembler output with view helloword.s
+ 
 
 -- original README -- 
 

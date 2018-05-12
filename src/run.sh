@@ -13,10 +13,10 @@ case "$1" in
 *)			idir=include/$dir;      remotehost=${2-$REMOTEHOST} ;;
 esac
 
-if [ ! -d "$target/$os" -o ! -d "$idir" ]; then
-	echo 2>&1 $0: unknown combination '"'$target/$os'"'
-	exit 1
-fi
+#if [ ! -d "$target/$os" -o ! -d "$idir" ]; then
+#	echo 2>&1 $0: unknown combination '"'$target/$os'"'
+#	exit 1
+#fi
 
 C=`basename $1 .s`
 BUILDDIR=${BUILDDIR-.} LCC="${LCC-${BUILDDIR}/lcc} -Wo-lccdir=$BUILDDIR"
