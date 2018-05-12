@@ -89,6 +89,9 @@ setup(int argc, char **argv)
 }
 
 
+#ifdef __APPLE__
+#warning "Took out memmove to get it to compile" 
+#else
 
 /* memmove is defined here because some vendors don't provide it at
    all and others do a terrible job (like calling malloc) */
@@ -114,3 +117,4 @@ memmove(void *dp, const void *sp, size_t n)
 	}
 	return 0;
 }
+#endif
