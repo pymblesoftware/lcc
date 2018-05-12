@@ -2,7 +2,7 @@
 This is an unoffical fork of the lcc compiler
 
 To get this to build you need to set the BUILDDIR 
-mkdir osx
+mkdir x86/osx
 export BUILDDIR=$PWD/x86/osx
 
 you need to have CC unset so it will pick up clang
