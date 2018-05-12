@@ -16,6 +16,15 @@ To get it to work
 5. vi helloworld.c   write something simple
 6. test the compiler trivially by running lcc -s helloworld.c and then view the assembler output with view helloword.s
  
+TODO: 
+Look at lburg spec for OS-X and get "make test" to work.
+It is currently generating 32bit assembler, needs directives for 32bit mode or a rewrite of the backend to generate 64bit code.
+Will get rid of  "error: instruction requires: Not 64-bit mode"
+Pass -arch i386
+
+Retarget to generate llvm IR
+Retarget to jvm /davlik
+
 
 -- original README -- 
 
