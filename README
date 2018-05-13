@@ -5,6 +5,9 @@ To get this to build you need to set the BUILDDIR
 mkdir x86/osx
 export BUILDDIR=$PWD/x86/osx
 
+make HOSTFILE=etc/osx.c all
+
+
 you need to have CC unset so it will pick up clang
 CC=gcc will probably not work.  
 
